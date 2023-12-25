@@ -2,11 +2,14 @@ import { Camera, CameraType } from 'expo-camera';
 import { useState } from 'react';
 import { Button, Text, TouchableOpacity, View } from 'react-native';
 import { styled } from 'nativewind';
+import { useNavigation } from '@react-navigation/native';
+
 
 const StyledView = styled(View);
 const StyledTouchableOpacity = styled(TouchableOpacity);
 
 export default function CameraScreen() {
+  const navigation = useNavigation();
   const [type, setType] = useState(CameraType.back);
   const [permission, requestPermission] = Camera.useCameraPermissions();
 
@@ -24,6 +27,10 @@ export default function CameraScreen() {
   function toggleCameraType() {
     setType(current => (current === CameraType.back ? CameraType.front : CameraType.back));
   }
+  function saveImage(){
+    
+    navigation.goBack()
+  }
 
   return (
     <StyledView className="flex-1">
@@ -33,6 +40,7 @@ export default function CameraScreen() {
             <Text className="text-2xl font-bold text-white">Flip Camera</Text>
           </StyledTouchableOpacity>
         </StyledView>
+        <Button onPress={saveImage} title="Save Image" />
       </Camera>
     </StyledView>
   );
