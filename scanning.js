@@ -95,6 +95,14 @@ async function diff(name_1, name_2, theshold = 0.1) {
             }
         );
 
+        // Remove all pixels that are in the objects_list from the diff
+
+        objects_list.forEach(pixel => {
+            const x = pixel.x;
+            const y = pixel.y;
+            diff.setPixelColor(Jimp.cssColorToHex('#FFFFFF'), x, y); // Set the pixel to white
+        });
+
         // Save the diff image
         diff.write('diff.jpg', (err) => {
             if (err) {
@@ -166,17 +174,17 @@ function isCurveClosed(img) {
 //
 
 /*
+
+Attention: Do stuff asyncronously
+
 1. Scan + convert to standared size
 2. GrayScale
-3. Diff
-4. Save diff + boundix box
+3. Diff with previous image, ignoring pixels that are in the objects_list
+4. Save diff+error results in objects_list
+5. Repeat 1->4
+
 */
 
-diff('test_1_result_gray', 'test_2_result_gray', 0.3);
+// Put all pixels in objects_list for testing purposes
 
-// Pentru că e async, trebuie cu then
-saveObject('diff').then(() => {
-    console.log(objects_list);
-});
-
-
+diff('test_1_result_gray', 'test_2_result_gray', 0.1)
