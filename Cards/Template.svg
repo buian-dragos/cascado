@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="2.5in"
+   height="3.5in"
+   viewBox="0 0 63.499996 88.9"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   sodipodi:docname="Template.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="false"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="true"
+     showguides="false"
+     inkscape:zoom="2"
+     inkscape:cx="-1.75"
+     inkscape:cy="210.25"
+     inkscape:window-width="1920"
+     inkscape:window-height="1166"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer5" />
+  <defs
+     id="defs1">
+    <rect
+       x="7.9644607"
+       y="138.40258"
+       width="224.07109"
+       height="187.94869"
+       id="rect16" />
+    <rect
+       x="7.9644607"
+       y="138.40258"
+       width="224.07109"
+       height="187.94869"
+       id="rect15" />
+    <linearGradient
+       id="swatch13"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop13" />
+    </linearGradient>
+  </defs>
+  <g
+     inkscape:label="Main"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       inkscape:groupmode="layer"
+       id="layer4"
+       inkscape:label="Border">
+      <rect
+         style="fill:#ececec;fill-opacity:1;stroke:none;stroke-width:0.264999;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+         id="rect13"
+         width="63.5"
+         height="88.900002"
+         x="0"
+         y="0"
+         rx="3.3836443"
+         ry="3.3836443"
+         inkscape:label="BorderRect" />
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="layer5"
+       inkscape:label="Text">
+      <rect
+         style="fill:#f9f9f9;fill-opacity:1;stroke:none;stroke-width:0.377767;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+         id="rect14-7"
+         width="59.285473"
+         height="49.728096"
+         x="2.1072636"
+         y="36.619015"
+         rx="2.1750946"
+         ry="2.1750946"
+         inkscape:label="TextBox" />
+      <text
+         xml:space="preserve"
+         transform="scale(0.26458333)"
+         id="text16"
+         style="text-align:center;white-space:pre;shape-inside:url(#rect16);shape-padding:2.37501;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:1.00157;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+         inkscape:label="Text"
+         x="0"
+         y="0"><tspan
+           x="79.570312"
+           y="152.05966"
+           id="tspan2"><tspan
+             style="font-family:'Berlin Sans FB';-inkscape-font-specification:'Berlin Sans FB';fill:#000000"
+             id="tspan1">Card description</tspan></tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:0.264999;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+       x="23.766508"
+       y="4.7124038"
+       id="text14"
+       inkscape:label="Title"><tspan
+         id="tspan14"
+         style="fill:#1a1a1a;stroke-width:0.265"
+         x="23.766508"
+         y="4.7124038"
+         sodipodi:role="line">Card Title</tspan></text>
+    <rect
+       style="fill:#f9f9f9;fill-opacity:1;stroke:none;stroke-width:0.291072;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+       id="rect14"
+       width="59.285473"
+       height="29.522518"
+       x="2.1072636"
+       y="5.9284801"
+       rx="2.1750958"
+       ry="2.1750958"
+       inkscape:label="Picture" />
+  </g>
+</svg>
