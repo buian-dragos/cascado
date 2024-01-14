@@ -8,6 +8,13 @@ import Jimp from 'jimp';
 import jscanify from 'jscanify'
 import { loadImage } from 'canvas'
 
+import {express} from 'express'
+
+// -----------------------------
+
+const app = express()
+
+
 function scan(name) {
     // For Debugging: https://colonelparrot.github.io/jscanify/tester.html 
     // Scans the image and saves it as name_scan.jpg
@@ -27,21 +34,21 @@ function scan(name) {
             result_height = t
         }
 
-        scanner.loadOpenCV(function (cv) {
+        scanner.loadOpenCV(async function (cv) {
             const result_image = scanner.extractPaper(image, result_height, result_width)
 
             // Make all edge pixels white
             // #TODO: fă să dai crop la edge, nu să le pui o anumită culoare
-            result_image.scan(0, 0, result_image.bitmap.width, result_image.bitmap.height, function (x, y, idx) {
+            // result_image.scan(0, 0, result_image.bitmap.width, result_image.bitmap.height, function (x, y, idx) {
 
-                const error = 0
+            //     const error = 0
 
-                if (x < error || y < error || x >= result_image.bitmap.width - error || y >= result_image.bitmap.height - error) {
-                    this.bitmap.data[idx] = 255
-                    this.bitmap.data[idx + 1] = 255
-                    this.bitmap.data[idx + 2] = 255
-                }
-            })
+            //     if (x < error || y < error || x >= result_image.bitmap.width - error || y >= result_image.bitmap.height - error) {
+            //         this.bitmap.data[idx] = 255
+            //         this.bitmap.data[idx + 1] = 255
+            //         this.bitmap.data[idx + 2] = 255
+            //     }
+            // })
 
             let result_path = path + '_scan.jpg'
             writeFileSync(result_path, result_image.toBuffer("image/jpeg"))
@@ -338,16 +345,18 @@ Attention: Do stuff asyncronously
 
 let objectsList = [] // List of objects (differences between images) + error bounding box
 
+scan('test_1')
+
 // toBlackAndWhite('test_2_scan', 150)
 // diff('test_1_scan_bw', 'test_2_scan_bw', 0.1)
 // saveObject('diff', 3).then(() => {
 //     testSaveObject()
 // })
 
-isCurveClosed('test', (result, area) => {
-    console.log('Is the curve closed?', result);
-    console.log('Area Percentage:', Number(area).toFixed(2) + ' %');
-});
+// isCurveClosed('test', (result, area) => {
+//     console.log('Is the curve closed?', result);
+//     console.log('Area Percentage:', Number(area).toFixed(2) + ' %');
+// });
 
 /* areLinesFromEdgeToEdge('test', (error, result) => {
     console.log('Are lines from edge to edge?', result);
